@@ -23,8 +23,15 @@ O código-fonte é privado.
   de XP, commit a commit.
 - **Dashboard e Smells**: pilares, tendência, piores pontos e a lista de achados com o trecho do
   código.
-- **Workspace por projeto**: painéis com tiling e autotiling, terminal que já abre o Claude Code
-  na pasta do projeto, navegador embutido e apps externos presos aos painéis (macOS).
+- **Workspace por projeto**: painéis com tiling e autotiling; terminal que já abre o Claude Code,
+  o Codex CLI ou o shell na pasta do projeto; navegador embutido, com zoom e os atalhos do
+  Workspace valendo dentro da página; apps externos presos aos painéis (macOS). Você escolhe a
+  ordem das opções de um painel novo em Configurações.
+- **Painel de Revisão**: explorador de arquivos, busca de texto e controle de código-fonte
+  (alterações, stage e commits, só leitura), com destaque de sintaxe e diff. `⌘P` abre qualquer
+  arquivo do projeto ou leva a qualquer painel.
+- **Pastas sem git**: um projeto que ainda não tem git entra só com o Workspace e passa a ter
+  análise sozinho no primeiro commit.
 - **Linguagens**: TypeScript/JavaScript, Python, Rust, Go e Swift.
 
 ## Instalar
@@ -43,8 +50,11 @@ procurar na hora. As atualizações são assinadas e verificadas antes de instal
 
 ## Requisitos
 
-- Um repositório **git** para analisar.
+- Para a análise: um repositório **git** com pelo menos um commit. Pastas sem git abrem só o
+  Workspace.
 - Para o terminal com o Claude: [Claude Code](https://docs.claude.com/en/docs/claude-code) instalado.
+- Para o terminal com o Codex: [Codex CLI](https://github.com/openai/codex) instalado
+  (`npm i -g @openai/codex`).
 - Para prender apps externos no Workspace (macOS): permissão de **Acessibilidade**.
 
 ## Privacidade
